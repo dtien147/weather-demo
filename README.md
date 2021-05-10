@@ -1,10 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+# Getting Started with the project
 
 ### `yarn start`
 
@@ -16,8 +10,7 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. We can use `--coverage` to generate test report.
 
 ### `yarn build`
 
@@ -27,44 +20,68 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Folder Structure
+============================
+  .
+    ├── build                   # Compiled files    
+    ├── src                     # Source files
+        ├── assets              
+        ├── components
+        ├── constants
+        ├── hooks
+        ├── models
+        ├── pages
+        ├── services        
+        └── utils
+    └── README.md
 
-### `yarn eject`
+### 1. Assets
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We can store all assets (font, images, icons) in this folder.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Components are the life-blood of your application. They will hold the UI for your application, \
+and can sometimes hold the Business Logic and also any State which has to be maintained.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  .        
+    ├── components
+        ├── ExampleComponent              
+            ├── __test__
+            ├── index.js
+            ├── index.css                
+        └── index.js                # Where we export all components
+    └── README.md
 
-## Learn More
+### 3. Constants
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Where we define all constants of the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Hooks
 
-### Code Splitting
+In this simple project, we use react hooks to handle side effects instead of redux. \
+This folder will contain all custom hooks of the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. Models
 
-### Analyzing the Bundle Size
+We use ES6 Classes to construct data models in APIs that We'are using. So that other teammates can easily know \
+which properties they need to use and what it is.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 6. Pages
 
-### Making a Progressive Web App
+In this structure, each page gets its own folder, so that it’s easy to figure out where page's code located.\
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 7. Services
 
-### Advanced Configuration
+The connectors of your application with the outside world. Any form of API call which needs to happen, \
+to share data with an external service or client, should happen within the adapter itself.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 8. Utils
 
-### Deployment
+This folder is a place where you can place small snippets you can use throughout the application. \
+Small functions to build bigger things with.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 9. Tests
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If we want to test functions/components we will create a __test__ folder in its folder. \
+We will store all tests of that functions/components in the tests folder

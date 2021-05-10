@@ -1,0 +1,7 @@
+.select-list-item {
+    padding: 10px;
+}
+
+.select-list-item:hover {
+    background-color: darkgrey;
+}

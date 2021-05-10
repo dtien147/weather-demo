@@ -1,0 +1,26 @@
+.city-weather {
+    margin-top: 20px;
+}
+
+.city-weather-data {
+    display: flex;
+    justify-content: space-around;
+}
+
+.city-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width : 769px) {
+    .city-weather-data {
+        flex-direction: row;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+    .city-weather-data {
+        flex-direction: column;
+    }
+}
