@@ -22,18 +22,13 @@ Your app is ready to be deployed!
 
 Folder Structure
 ============================
-  .
-    ├── build                   # Compiled files    
-    ├── src                     # Source files
-        ├── assets              
-        ├── components
-        ├── constants
-        ├── hooks
-        ├── models
-        ├── pages
-        ├── services        
-        └── utils
-    └── README.md
+
+    .
+      ├── build                   # Compiled files
+      ├── coverage                # Test report
+      ├── public                  # Static files
+      ├── src                     # Source files      
+      └── README.md
 
 ### 1. Assets
 
@@ -44,14 +39,13 @@ We can store all assets (font, images, icons) in this folder.
 Components are the life-blood of your application. They will hold the UI for your application, \
 and can sometimes hold the Business Logic and also any State which has to be maintained.
 
-  .        
+    .        
     ├── components
         ├── ExampleComponent              
             ├── __test__
             ├── index.js
             ├── index.css                
-        └── index.js                # Where we export all components
-    └── README.md
+        └── index.js                # Where we export all components   
 
 ### 3. Constants
 
